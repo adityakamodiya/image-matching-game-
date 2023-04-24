@@ -47,7 +47,7 @@
                     clearInterval(interval)
             }
             , 1000)
-        let imagearray = ['bheem.jpg', 'chutki.jpg', 'jaggu.webp','sunio.jpg','doremon.png','nobita.jpg', 'kaliya.png', 'raja.png', 'raju.jpg','indumati.jpg','kichak.png','kirmada.jpg','tuntun.webp','ming.jpg','dholu.jpg','krishana.jpg']
+        let imagearray = ['bheem.jpg', 'chutki.jpg', 'jaggu.webp','sunio.jpg','doremon.png','nobita.jpg']
         console.log(imagearray.length)
         let checkingarray = []
         let noarray = []
@@ -59,60 +59,20 @@
 
         function mainfucn() {
 
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < box.length; i++) {
                 
              
                 random = imagearray[Math.floor(Math.random() * imagearray.length)]
-            if(!checkingarray.includes(random)){
+           
                 
                 checkingarray.push(random)
                 image = document.createElement("img")
                 image.src = random
               
                 box[i].append(image)
-                // box_class2[u].append(image)
-                console.log(box_class2[u])
-                u++
-                console.log(i)
-                // another()
-                // box[u].append(image)
-                // console.log(box[i])
-                // console.log(box[u])
-            
-                // another()
             }
-            //  if(i){
-            //     console.log(random)
-            //     another()
-            // }
 
-                // console.log(checkingarray)
-
-
-
-
-
-                // console.log(noarray)
-                //  else if(!noarray.includes(i)){
-                //     let image = document.createElement("img")
-                // image.src = random
-                // box[i].append(image)
-            
-                // }
-
-
-
-            }
-            console.log(checkingarray)
-            
-        }
-        function another()
-        {
-            box[u].append(image)
-            u--
-        }
-
-        
+        }   
 
     </script>
 </body>
