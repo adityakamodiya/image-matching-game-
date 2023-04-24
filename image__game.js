@@ -1,40 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="image_game.css">
-</head>
-
-<body>
-    <button class="score"></button>
-    <div id="wrapper">
-        <div class="boxes">
-            <div class="box1 "></div>
-            <div class="box1 "></div>
-            <div class="box1 "></div>
-            <div class="box1 "></div>
-            <div class="box1 "></div>
-            <div class="box1 "></div>
-            <div class="box2"></div>
-            <div class="box2 "></div>
-            <div class="box2 "></div>
-            <div class="box2 "></div>
-            <div class="box2 "></div>
-            <div class="box2 "></div>
-
-        </div>
-    </div>
-    <script>
         let box1 = document.querySelectorAll(".box1")
         let box2 = document.querySelectorAll(".box2")
         let imageArray2 = ['indumati.jpg','bheem.jpg','chutki.jpg','dholu.jpg','jaggu.webp','kaliya.png']
         let imageArray1 = ['bheem.jpg','chutki.jpg','dholu.jpg','indumati.jpg','jaggu.webp','kaliya.png']
 
-    
+        // console.log(imageArray2.length)
         var i
         var random1
         var randomvalue2
@@ -46,7 +15,7 @@
           getrandomvalues();
           
         }
-    
+        // getrandomvalues()
         function getrandomvalues()
         {   
             random1 = imageArray1[Math.floor(Math.random()*imageArray1.length)]
@@ -82,9 +51,3 @@
                 getrandomvalues2();
             }
         }
-                </script>
-    <link rel="stylesheet" href="image__game.js">
-   
-</body>
-
-</html>
