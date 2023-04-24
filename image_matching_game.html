@@ -59,18 +59,22 @@
 
         function mainfucn() {
 
-            for (let i = 0; i < box.length; i++) {
+            for (let i = 0; i < 6; i++) {
                 
-             
+            if(!checkingarray.includes(random))
+                {
+                checkingarray.push(random)         
                 random = imagearray[Math.floor(Math.random() * imagearray.length)]
-           
-                
-                checkingarray.push(random)
+                // console.log(checkingarray)
+                // checkingarray.push(random)
                 image = document.createElement("img")
                 image.src = random
               
                 box[i].append(image)
-            }
+            
+                }
+                console.log(checkingarray)
+        }
 
         }   
 
