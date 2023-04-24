@@ -1,0 +1,54 @@
+
+let random
+let j=0
+let randomarray = []
+experiment();
+function experiment()
+{
+
+    for(let i=0;i<box.length;i++)
+        {
+ random = Math.floor(Math.random()*box.length)
+ 
+ console.log(random)
+ if(!randomarray.includes(i))
+//  checkingarray.push(random)
+//  console.log(checkingarray)
+//  if(!checkingarray.includes(random))
+{
+ fiximage()
+}
+ else
+ {
+    experiment();
+    randomarray.push(random) 
+}
+// ;}
+ console.log(random)
+
+        }
+}
+        function fiximage()
+        { 
+            if(j<imagearray.length){
+            
+            let img  = document.createElement("img")
+            img.src =imagearray[j]
+            box[random].append(img)
+            j++
+        }
+        else{
+            j=0;
+            fiximage();
+        }
+             
+        }
+
+
+
+
+
+
+
+
+

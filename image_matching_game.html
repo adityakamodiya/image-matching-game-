@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="image_game.css">
+</head>
+
+<body>
+    <button class="score"></button>
+    <div id="wrapper">
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box box-class2"></div>
+            <div class="box box-class2"></div>
+            <div class="box box-class2"></div>
+            <div class="box box-class2"></div>
+            <div class="box box-class2"></div>
+            <div class="box box-class2"></div>
+            <!-- <img src="bheem.jpg" alt=""> -->
+
+        </div>
+    </div>
+    <link rel="stylesheet" href="image_game.js">
+    <!-- <link rel="stylesheet" href="image_game.js"> -->
+    <script>
+        let score = 5
+        let box = document.querySelectorAll(".box")
+        let box_class2 = document.querySelectorAll(".box-class2")
+        // console.log(box_class2)
+        let score_box = document.querySelector(".score")
+        score_box.style.padding = "10px 20px"
+        // console.log(score)
+        let interval = setInterval(
+            () => {
+                score_box.innerHTML = score
+                score--
+                if (score === -1)
+                    clearInterval(interval)
+            }
+            , 1000)
+        let imagearray = ['bheem.jpg', 'chutki.jpg', 'jaggu.webp','sunio.jpg','doremon.png','nobita.jpg', 'kaliya.png', 'raja.png', 'raju.jpg','indumati.jpg','kichak.png','kirmada.jpg','tuntun.webp','ming.jpg','dholu.jpg','krishana.jpg']
+        console.log(imagearray.length)
+        let checkingarray = []
+        let noarray = []
+        var random
+        var image
+        let u=0
+        mainfucn()
+        
+
+        function mainfucn() {
+
+            for (let i = 0; i < 6; i++) {
+                
+             
+                random = imagearray[Math.floor(Math.random() * imagearray.length)]
+            if(!checkingarray.includes(random)){
+                
+                checkingarray.push(random)
+                image = document.createElement("img")
+                image.src = random
+              
+                box[i].append(image)
+                // box_class2[u].append(image)
+                console.log(box_class2[u])
+                u++
+                console.log(i)
+                // another()
+                // box[u].append(image)
+                // console.log(box[i])
+                // console.log(box[u])
+            
+                // another()
+            }
+            //  if(i){
+            //     console.log(random)
+            //     another()
+            // }
+
+                // console.log(checkingarray)
+
+
+
+
+
+                // console.log(noarray)
+                //  else if(!noarray.includes(i)){
+                //     let image = document.createElement("img")
+                // image.src = random
+                // box[i].append(image)
+            
+                // }
+
+
+
+            }
+            console.log(checkingarray)
+            
+        }
+        function another()
+        {
+            box[u].append(image)
+            u--
+        }
+
+        
+
+    </script>
+</body>
+
+</html>
