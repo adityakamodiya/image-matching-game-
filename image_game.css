@@ -12,6 +12,7 @@
     justify-content: center;
 }
 
+
 .boxes {
     border: 1px solid;
     height: 600px;
@@ -21,17 +22,49 @@ justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 }
-.box1,.box2 {
-    border: 1px solid;
+.main-box{
     height: 23%;
     width: 31%;
+}
+.box1,.box2 {
+    border: 1px solid;
+    height: 100%;
+    width: 100%;
+    /* display: none; */
+    /* position: relative; */
     /* background-image: url(bheem.jpg); */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-img{
+.image-box1,.image-box2{
+    /* position: relative; */
     height: 100%;
     width: 100%;
+    display: none;
+    /* border: 1px solid; */
+}
+.domy-image{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+ /* .image-box1 img{
+    height: 100%;
+    width: 100%;
+} */
+.image-box2 img{
+    height: 100%;
+    width: 100%;
+    /* position: absolute; */
+}
+.image-box1 img{
+    height: 100%;
+    width: 100%;
+}
+.dommy-image img{
+    height: 100%;
+    width: 100%; 
+    /* display: flex; */
 }
