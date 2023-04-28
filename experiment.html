@@ -24,9 +24,9 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  .flip-card:hover .flip-card-inner {
+  /* .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
+  } */
   
   .flip-card-front, .flip-card-back {
     position: absolute;
@@ -67,6 +67,14 @@
       </div>
     </div>
   </div>
-  
+  <script>
+    let flip_card = document.querySelector(".flip-card")
+    
+    let flip_card_inner = document.querySelector(".flip-card-inner")
+    flip_card.onclick = ()=>
+    {
+      flip_card_inner.style.transform = "rotateY(180deg)"
+    }
+  </script>
 </body>
 </html>
